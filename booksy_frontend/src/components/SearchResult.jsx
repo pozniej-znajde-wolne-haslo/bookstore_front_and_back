@@ -19,7 +19,6 @@ export default function SearchResult() {
     setCurrentPage,
     booksPerPage,
     updateSuccess,
-    setUpdateSuccess,
   } = useContext(Context);
 
   const queryString = new URLSearchParams(window.location.search);
@@ -31,8 +30,8 @@ export default function SearchResult() {
     }
     return result;
   };
-  const currentUrl = setQueryString().split(' ').join('+');
 
+  const currentUrl = setQueryString().split(' ').join('+');
   const handleSearch = async () => {
     try {
       const response = await fetch(
@@ -42,7 +41,6 @@ export default function SearchResult() {
         const data = await response.json();
         if (data.success) {
           setBooksToGenre(data.data);
-          setUpdateSuccess(!updateSuccess);
           setCurrentPage(1);
         }
       }
@@ -50,10 +48,6 @@ export default function SearchResult() {
       console.log(error);
     }
   };
-
-  useEffect(() => {
-    handleSearch();
-  }, [currentUrl]);
 
   useEffect(() => {
     handleSearch();

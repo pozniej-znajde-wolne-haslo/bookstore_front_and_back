@@ -5,13 +5,15 @@ import { FaSearch } from 'react-icons/fa';
 import './_SearchBar.scss';
 
 export default function SearchBar() {
-  const { hideUpdateDeleteBookForms } = useContext(Context);
+  const { hideUpdateDeleteBookForms, updateSuccess, setUpdateSuccess } =
+    useContext(Context);
   const navigate = useNavigate();
 
   const handleSearch = async (e) => {
     e.preventDefault();
     const plused = e.target.search.value.split(' ').join('+');
     e.target.reset();
+    setUpdateSuccess(!updateSuccess);
     navigate(`/books/request/search?q=${plused}`);
   };
 

@@ -50,7 +50,7 @@ export default function Modal({
               setBasketLinkActive(false);
             }}
           >
-            <NavLink to='/books/selection'>Books</NavLink>
+            <NavLink to='/books'>Books</NavLink>
           </li>
           <li
             onClick={() => {

@@ -23,7 +23,7 @@ export default function Navbar() {
   const handleBooksDisplay = () => {
     setCurrentPage(1);
     hideUpdateDeleteBookForms();
-    navigate('/books/selection');
+    navigate('/books');
   };
 
   const logout = () => {
@@ -62,12 +62,7 @@ export default function Navbar() {
               {basketItemsQty > 0 && basketItemsQty}
             </span>
           </NavLink>
-          <FaBars
-            size={24}
-            color={'#3c4f58'}
-            /* className='burger-menu' */
-            onClick={toggleModal}
-          />
+          <FaBars size={24} color={'#3c4f58'} onClick={toggleModal} />
         </div>
 
         {showModal && (
@@ -93,7 +88,7 @@ export default function Navbar() {
               setBasketLinkActive(false);
             }}
           >
-            <NavLink to='/books/selection'>Books</NavLink>
+            <NavLink to='/books'>Books</NavLink>
           </li>
           <li
             id='basket-icon'

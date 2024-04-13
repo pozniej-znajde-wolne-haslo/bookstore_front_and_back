@@ -26,8 +26,6 @@ export default function Profile() {
     setBasket,
   } = useContext(Context);
   const [userOrders, setUserOrders] = useState([]);
-  const navigate = useNavigate();
-  // states for writing/editing reviews:
   const [userReviews, setUserReviews] = useState([]);
   const [reviewsChange, setReviewsChange] = useState(null);
   const [renderOrders, setRenderOrders] = useState(false);
@@ -37,6 +35,7 @@ export default function Profile() {
   const [activeProfileLink, setActiveProfileLink] = useState('');
   const [deleteAccount, setDeleteAccount] = useState(false);
   const [order, setOrder] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = sessionStorage.getItem('token');
@@ -300,20 +299,14 @@ export default function Profile() {
 
             <div>
               <p className='profile-link'>
-                <NavLink
-                  to='/books/selection'
-                  onClick={hideUpdateDeleteBookForms}
-                >
+                <NavLink to='/books' onClick={hideUpdateDeleteBookForms}>
                   Edit book information
                 </NavLink>
               </p>
             </div>
             <div>
               <p className='profile-link'>
-                <NavLink
-                  to='/books/selection'
-                  onClick={hideUpdateDeleteBookForms}
-                >
+                <NavLink to='/books' onClick={hideUpdateDeleteBookForms}>
                   Remove a book from assortment
                 </NavLink>
               </p>

@@ -14,9 +14,7 @@ export default function Home() {
           <div className='hero'>
             <h1>Find your next great read with</h1>
             <p className='shop-name'>Booksy</p>
-            <button onClick={() => navigate('/books/selection')}>
-              Our Book Offer
-            </button>
+            <button onClick={() => navigate('/books')}>Our Book Offer</button>
           </div>
         </div>
       </div>
