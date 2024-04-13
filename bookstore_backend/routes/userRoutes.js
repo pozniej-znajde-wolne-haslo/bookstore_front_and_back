@@ -14,7 +14,7 @@ import { streamProfileImage } from '../controllers/imageController.js';
 const routes = Router();
 
 routes.get('/:id', getUser);
-routes.post('/register', /* validation, */ register);
+routes.post('/register', validation, register);
 routes.post('/login', login);
 routes.patch('/update/:id', authorization, updateUser);
 routes.get('/image/:fileName', streamProfileImage);
