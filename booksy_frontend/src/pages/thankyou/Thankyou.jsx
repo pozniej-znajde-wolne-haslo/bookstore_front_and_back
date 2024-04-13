@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Context } from '../../context/Context';
 import { FaHome } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import './_Thankyou.scss';
+import './_ThankYou.scss';
 
 export default function ThankYou() {
   const { orderReceived } = useContext(Context);
