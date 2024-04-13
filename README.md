@@ -2,7 +2,7 @@
 
 Booksy is a lightweight E-Commerce platform developed as the final project during the 1-year full-stack web development course at DCI. This repository serves as the frontend component of the Booksy application, catering specifically to the needs of a small independent bookstore.
 
-![Preview](./public/readMe_img.png)
+![Preview](./public/ReadmeImage.jpg)
 
 ## Technologies
 
