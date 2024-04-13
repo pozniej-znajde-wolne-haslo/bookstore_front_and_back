@@ -1,0 +1,23 @@
+@import '../../_config';
+@import '../../_utilities';
+
+.notFound-container {
+  @include flexbox(column, 3rem);
+  align-items: center;
+  justify-content: center;
+  height: 84vh;
+
+  h2 {
+    font-family: $secondary-font;
+    font-size: 28px;
+    color: $primary-font-color;
+  }
+
+  button {
+    @include flexbox(row, 10px);
+    align-items: center;
+    @extend .btn-primary;
+    line-height: 1.8;
+    @extend .btn-steelblue;
+  }
+}

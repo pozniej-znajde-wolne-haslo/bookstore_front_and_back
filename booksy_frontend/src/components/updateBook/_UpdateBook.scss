@@ -1,0 +1,79 @@
+@import '../../_config';
+
+.updateBook-container {
+  width: 32rem;
+  padding: 1rem;
+  padding: 1rem 0;
+  line-height: 1.4;
+  color: #454545;
+
+  .updateBook-img-form,
+  .updateBook-details-form {
+    @include flexbox(column, 0.5rem);
+    align-items: center;
+    padding: 2rem 0;
+    line-height: 1.5;
+    border: 1px solid rgb(233, 231, 231);
+    border-radius: $primary-border-radius;
+    box-shadow: $primary-box-shadow;
+    background: rgb(228, 228, 235);
+    background: $primary-linear-gradient;
+    width: 32rem;
+
+    .update-delete-msg {
+      @extend .forms-msg;
+      width: 270px;
+      text-align: center;
+    }
+
+    button {
+      width: $primary-btn-width;
+    }
+  }
+
+  legend {
+    width: 25rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 0.8px;
+    font-weight: bold;
+    color: $primary-font-color;
+    padding: 4px 0;
+  }
+
+  .updateBook-img-form {
+    border-bottom: 1px solid rgb(197, 195, 195);
+
+    input {
+      background-color: #fff;
+      line-height: 2.3;
+      width: 270px;
+    }
+
+    .updateBook-btns-container {
+      @include flexbox(row, 1rem);
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+  }
+
+  .updateBook-details-form {
+    .form-section {
+      @include flexbox(column, 0);
+      input,
+      textarea {
+        background-color: #fff;
+        line-height: 2.3;
+        width: 270px;
+      }
+    }
+
+    .updateBook-btns-container {
+      @include flexbox(row, 1rem);
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+  }
+}

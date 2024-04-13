@@ -1,0 +1,42 @@
+@import '../../_config';
+
+.search-genres-container {
+  @include flexbox(column, 1rem);
+  align-items: center;
+  border-bottom: $primary-border;
+  padding: 0.5rem 0 4rem 0;
+
+  .books-genres-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3rem;
+    grid-row-gap: 1rem;
+    padding-top: 1.5rem;
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: $primary-font-color;
+
+      &:nth-child(odd) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .search-genres-container {
+    .books-genres-container {
+      @include flexbox(row, 3rem);
+      justify-content: center;
+      flex-wrap: wrap;
+      line-height: 0.1;
+      padding-top: 2.5rem;
+
+      h3 {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}

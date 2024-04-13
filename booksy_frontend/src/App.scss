@@ -1,0 +1,140 @@
+@import 'config';
+
+header {
+  border-bottom: $primary-border;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+
+  nav {
+    @include flexbox(row, 2rem);
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    min-height: 6rem;
+    padding-right: 3rem;
+
+    .shop-logo-container {
+      @include flexbox(row, 0);
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .shop-icon {
+        padding-bottom: 0.5rem;
+      }
+
+      .shop-name {
+        @extend .shop-name-styles;
+        font-weight: 400;
+        font-size: 2.3rem;
+        margin-left: -12px;
+      }
+    }
+
+    .burger-menu {
+      @include flexbox(row, 1.5rem);
+    }
+
+    .basket-qty {
+      font-size: 1.5rem;
+    }
+
+    .desktop-links {
+      display: none;
+    }
+
+    .overlay {
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+
+      .modal {
+        background-color: #f4f4f4;
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2), 0 7px 20px rgba(0, 0, 0, 0.17);
+        width: 100%;
+        height: 500px;
+        margin: 20% auto;
+        @include flexbox(column, 4rem);
+        align-items: center;
+
+        .closeBtn {
+          align-self: flex-end;
+          font-size: 35px;
+          margin-top: 10px;
+          margin-right: 20px;
+          color: #888;
+
+          &:hover {
+            cursor: pointer;
+            color: #000;
+          }
+        }
+
+        &-links {
+          @include flexbox(column, 4rem);
+          font-size: 1.8rem;
+
+          li:hover {
+            color: #207191;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  @include flexbox(row, 15px);
+  justify-content: center;
+  align-items: center;
+  border-top: $primary-border;
+  color: $primary-font-color;
+  height: 8vh;
+  min-height: 6rem;
+
+  .footer-text {
+    @extend .shop-name-styles;
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    nav {
+      padding-left: 2rem;
+
+      .burger-menu {
+        display: none;
+      }
+
+      .desktop-links {
+        color: $primary-font-color;
+        font-weight: 300;
+        gap: 4rem;
+        padding-right: 2.5rem;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+
+        li:hover {
+          color: #207191;
+          text-decoration: underline;
+        }
+
+        #basket-icon {
+          line-height: 0.8;
+        }
+      }
+    }
+  }
+}

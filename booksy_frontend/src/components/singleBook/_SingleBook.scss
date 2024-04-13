@@ -1,0 +1,142 @@
+@import '../../_config';
+@import '../../_utilities';
+
+.singleBook-page {
+  min-height: 80vh;
+
+  .bookCard-and-btns-container {
+    @include flexbox(column, 0);
+    align-items: center;
+    border-radius: $primary-border-radius;
+    background: $primary-linear-gradient;
+    box-shadow: $primary-box-shadow;
+    width: 32rem;
+    margin: auto;
+    margin-top: 5rem;
+    padding-bottom: 1.5rem;
+
+    .cart-and-admin-btns-container {
+      @include flexbox(row, 8px);
+
+      button {
+        @extend .btn-primary;
+        line-height: 1.8;
+      }
+
+      .cart-btn {
+        @extend .btn-steelblue;
+      }
+
+      .admin-btn {
+        @extend .btn-magenta;
+      }
+    }
+  }
+
+  .singleBook-admin-forms {
+    margin: auto;
+    margin-top: -5px;
+    width: 32rem;
+  }
+
+  .singleBook-details {
+    @include flexbox(column, 0);
+    justify-content: center;
+    line-height: 2;
+    padding: 3rem;
+    padding-bottom: 0;
+
+    h2 {
+      color: $primary-font-color;
+      font-family: $secondary-font;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      color: $primary-font-color;
+      margin-top: 1.5rem;
+    }
+
+    .book-details-caption {
+      color: $primary-font-color;
+      font-weight: 600;
+      margin-right: 1rem;
+    }
+
+    .show-hide-text {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #4f0c32;
+      border-bottom: 1px solid #4f0c32;
+      cursor: pointer;
+      padding: 0 2px;
+    }
+  }
+
+  .singleBook-reviews {
+    @include flexbox(column, 0);
+    line-height: 2;
+    padding: 3rem;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+
+    h3 {
+      color: $primary-font-color;
+    }
+
+    h4 {
+      color: $primary-font-color;
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .singleBook-page {
+    .singleBook-details,
+    .singleBook-reviews {
+      padding-left: 9rem;
+      padding-right: 9rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .singleBook-page {
+    display: grid;
+    grid-template-areas:
+      'book details '
+      'forms placeholder'
+      'reviews reviews ';
+    grid-template-rows: 55rem auto auto;
+    grid-template-columns: auto auto;
+    grid-column-gap: 2.5rem;
+    padding-left: 5rem;
+
+    .bookcard-and-btns-container {
+      grid-area: book;
+    }
+    .singleBook-admin-forms {
+      grid-area: forms;
+      margin-top: 0;
+    }
+    .singleBook-details {
+      grid-area: details;
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+
+    .grid-placeholder {
+      grid-area: placeholder;
+    }
+
+    .singleBook-reviews {
+      grid-area: reviews;
+      padding-top: 0;
+      padding-left: 0rem;
+    }
+  }
+}

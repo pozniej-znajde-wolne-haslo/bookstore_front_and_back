@@ -1,0 +1,34 @@
+@import '../../_config';
+
+.search-form {
+  @include flexbox(row, 0);
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 1.8rem;
+  grid-area: searchBar;
+  padding-top: 3rem;
+
+  .search-input {
+    width: 70%;
+    height: 32px;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-left: 10px;
+  }
+
+  .search-btn {
+    border: $primary-border;
+    border-left: 0;
+    border-top-right-radius: $primary-border-radius;
+    border-bottom-right-radius: $primary-border-radius;
+    background-color: #fff;
+    height: 32px;
+    padding: 5px 5px 0 4px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

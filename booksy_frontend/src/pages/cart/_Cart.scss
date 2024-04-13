@@ -1,0 +1,135 @@
+@import '../../_config';
+@import '../../_utilities';
+
+.basket-page {
+  min-height: 84vh;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+
+  h2 {
+    font-family: $secondary-font;
+    font-size: 2.2rem;
+    color: $primary-font-color;
+    text-align: center;
+  }
+  .basket-caption {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    text-align: center;
+    color: $primary-font-color;
+  }
+
+  button {
+    @extend .btn-primary;
+    margin-left: 3rem;
+  }
+
+  .basket-item-container {
+    .basket-item {
+      @include flexbox(row, 1rem);
+      align-items: center;
+      margin: 1rem 0 1rem 3rem;
+
+      .basketIMG-container {
+        width: 55px;
+        height: 87px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .basket-item-details {
+        .qty-p {
+          @include flexbox(row, 7px);
+          align-items: center;
+
+          .arrow-btn {
+            color: $primary-font-color;
+            border: $secondary-border;
+            line-height: 0.9;
+            padding: 2px 3px 1px 3px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .delete-btn {
+      @extend .btn-steelblue;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .checkout-btn {
+    @extend .btn-magenta;
+    margin-top: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .basket-page {
+    .basket-item-container {
+      display: grid;
+      grid-template-areas: 'bookCover details delBtn';
+      grid-template-columns: auto auto 40%;
+
+      .basket-item {
+        margin-left: 6rem;
+        .basketIMG-container {
+          grid-area: bookCover;
+        }
+        .basket-items-details {
+          grid-area: details;
+        }
+      }
+
+      .delete-btn {
+        grid-area: delBtn;
+        width: 120px;
+        height: 37px;
+        align-self: center;
+        justify-self: flex-start;
+        margin-right: 5rem;
+        margin-bottom: 0;
+      }
+    }
+
+    .checkout-btn {
+      margin-left: 6rem;
+    }
+  }
+}
+
+@media screen and (min-width: 860px) {
+  .basket-page {
+    .basket-item-container {
+      grid-template-columns: auto auto 45%;
+      .basket-item {
+        margin-left: 15rem;
+      }
+      .delete-btn {
+        width: 120px;
+        height: 40px;
+        align-self: center;
+        justify-self: flex-start;
+        margin-right: 5rem;
+      }
+    }
+
+    .checkout-btn {
+      margin-left: 15rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .basket-page {
+    .basket-item-container {
+      grid-template-columns: auto auto 50%;
+    }
+  }
+}

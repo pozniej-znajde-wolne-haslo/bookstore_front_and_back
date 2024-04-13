@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Great_Vibes';
+  src: url('fonts/Great_Vibes/GreatVibes-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat_Alternates';
+  src: url('fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf');
+}
+
+/* @font-face {
+  font-family: 'Karla';
+  src: url('fonts/Karla/static/Karla-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Karla_bold';
+  src: url('fonts/Karla/static/Karla-SemiBold.ttf');
+} */
+
+@font-face {
+  font-family: 'Karla';
+  src: url('fonts/Karla/Karla-VariableFont_wght.ttf');
+}
+
+.shop-name-styles {
+  font-family: 'Great_Vibes';
+  letter-spacing: 1px;
+  color: #263238;
+  text-shadow: #90a4ae 1px 0 10px;
+}
+
+.forms-msg {
+  color: rgb(192, 15, 15);
+  font-size: 1.4rem;
+}
+
+.btn-primary {
+  font-size: 1.5rem;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
+  color: #f6f5f3;
+  cursor: pointer;
+  padding: 5px 8px 7px 8px;
+}
+
+.btn-steelblue {
+  background-image: linear-gradient(#90a4ae, #263238);
+
+  &:hover {
+    background-image: linear-gradient(#abbaca, #0a0e10);
+  }
+  &:active {
+    background-image: linear-gradient(#a2b8c3, #36464f);
+    transform: scale(0.9);
+  }
+}
+
+.btn-magenta {
+  background-image: linear-gradient(#e8a0ca, #4f0c32);
+
+  &:hover {
+    background-image: linear-gradient(#e27ab7, #491130);
+  }
+  &:active {
+    background-image: linear-gradient(#e8a0ca, #4f0c32);
+    transform: scale(0.9);
+  }
+}

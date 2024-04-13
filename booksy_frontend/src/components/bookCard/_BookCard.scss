@@ -1,0 +1,49 @@
+@import '../../_config';
+@import '../../_utilities';
+
+.bookCard-container {
+  background: $primary-linear-gradient;
+  width: 24rem;
+  height: 45rem;
+  cursor: pointer;
+
+  .bookCover-container {
+    justify-self: flex-start;
+    margin: 3rem auto 1rem auto;
+    width: 15rem;
+    height: 24rem;
+    box-shadow: $primary-box-shadow;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .bookInfo-container {
+    @include flexbox(column, 1rem);
+    justify-content: center;
+    font-weight: 300;
+
+    h2 {
+      color: $primary-font-color;
+      font-family: $secondary-font;
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 1.2;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.7rem;
+    }
+    .book-price {
+      margin-top: 0.8rem;
+    }
+  }
+}
