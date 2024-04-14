@@ -2,7 +2,8 @@
 
 Booksy is a lightweight E-Commerce platform developed as the final project during the 1-year full-stack web development course at DCI. This repository serves as the monorepo of the Booksy application, catering specifically to the needs of a small independent bookstore.
 
-![Preview](./booksy_frontend/public/readMe_img.jpg)
+![Preview](./booksy_frontend/public/readmeImage_1.jpg)
+![Preview](./booksy_frontend/public/readmeImage_2.jpg)
 
 Booksy enables users to register, create and manage a custom profile. Users can connect through sharing reviews of their favourite books. Admin users have access to additional profile functionalities through the admin dashboard. They can upload new books, edit existing ones and delete products from assortment.
 
