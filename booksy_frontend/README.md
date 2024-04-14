@@ -1,11 +1,25 @@
-# React + Vite
+# Booksy Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Getting started
 
-Currently, two official plugins are available:
+1. Check that you are in the frontend directory. If not, navigate to:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# bookstore_frontend
-# bookstore_frontend
-# booksy_frontend
+```bash
+cd booksy_frontend
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Start local backend server (see Backend repository)
+
+4. Start local development server
+
+```bash
+npm run dev
+```
+
+Booksy's frontend should be running on `http://localhost:5173`.
