@@ -18,7 +18,7 @@ Booksy aims to keep dependencies low while still providing essential features fo
 - Bootstrapped with Vite
 - React
 - React-Router-DOM
-- React-hottoast
+- React-hot-toast
 - React-icons
 - SCSS
 
