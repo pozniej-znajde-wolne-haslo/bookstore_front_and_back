@@ -33,7 +33,7 @@ Booksy aims to keep dependencies low while still providing essential features fo
 
 To see the live version please visit:
 
-https://test-y6oh.onrender.com/
+https://booksy-store.onrender.com/
 
 ## Getting started
 
