@@ -34,27 +34,3 @@ Booksy aims to keep dependencies low while still providing essential features fo
 To see the live version please visit:
 
 https://booksy-store.onrender.com/
-
-## Getting started
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/pozniej-znajde-wolne-haslo/booksy_frontend.git
-```
-
-2. Install dependencies
-
-```bash
-npm install
-```
-
-3. Start local backend server (see Backend repository)
-
-4. Start local development server
-
-```bash
-npm run dev
-```
-
-Booksy's frontend should be running on `http://localhost:5173`.

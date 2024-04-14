@@ -2,7 +2,7 @@
 
 ## Getting started
 
-1. Check that you are in the backend directory. If not, navigate to:
+1. Make sure that you are in the backend directory. If not, navigate to:
 
 ```bash
 cd bookstore_backend
