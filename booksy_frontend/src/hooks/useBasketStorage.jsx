@@ -67,6 +67,7 @@ export const useBasketStorage = () => {
           basketItems: updatedBasketItems,
         };
       }
+
       const totalPrice = updatedBasketItems.reduce(
         (a, b) => a + b.price * b.quantity,
         0

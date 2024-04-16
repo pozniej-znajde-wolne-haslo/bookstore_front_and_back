@@ -17,7 +17,9 @@ export default function Cart() {
   return (
     <div className='basket-page'>
       <h2>Basket</h2>
-      {!basket || basket === 'undefined' ? (
+
+      {!basket /* || basket === 'undefined' */ ||
+      basket.basketItems.length === 0 ? (
         <p className='basket-caption'>Your basket is empty.</p>
       ) : (
         <div>
@@ -67,12 +69,21 @@ export default function Cart() {
               </div>
             );
           })}
-          <button
+
+          {basket.length !== 0 && (
+            <button
+              className='checkout-btn'
+              onClick={user ? redirectToCheckout : redirectToLogin}
+            >
+              Go to Checkout
+            </button>
+          )}
+          {/*  <button
             className='checkout-btn'
             onClick={user ? redirectToCheckout : redirectToLogin}
           >
             Go to Checkout
-          </button>
+          </button> */}
         </div>
       )}
     </div>
