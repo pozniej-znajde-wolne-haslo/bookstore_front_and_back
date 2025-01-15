@@ -62,7 +62,20 @@
       input {
         width: 250px;
         line-height: 2.4;
+
+        &::file-selector-button {
+          background-image: linear-gradient(#90a4ae, #263238);
+
+          &:hover {
+            background-image: linear-gradient(#abbaca, #0a0e10);
+          }
+          &:active {
+            background-image: linear-gradient(#a2b8c3, #36464f);
+            transform: scale(0.9);
+          }
+        }
       }
+
       button {
         @extend .btn-steelblue;
       }
