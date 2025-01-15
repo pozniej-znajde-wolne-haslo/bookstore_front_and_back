@@ -64,6 +64,9 @@
         line-height: 2.4;
 
         &::file-selector-button {
+          color: #f6f5f3;
+          cursor: pointer;
+          padding: 5px 8px 7px 8px;
           background-image: linear-gradient(#90a4ae, #263238);
 
           &:hover {
