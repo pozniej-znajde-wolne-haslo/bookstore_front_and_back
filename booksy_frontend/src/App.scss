@@ -141,6 +141,12 @@ footer {
   header {
     nav {
       height: 6rem;
+
+      .overlay {
+        .modal {
+          margin: auto;
+        }
+      }
     }
   }
   footer {
