@@ -30,6 +30,12 @@
   }
 }
 
+@media only screen and (min-width: 550px) {
+  .spinner-container {
+    height: 69vh;
+  }
+}
+
 @keyframes spin {
   100% {
     transform: rotate(360deg);
