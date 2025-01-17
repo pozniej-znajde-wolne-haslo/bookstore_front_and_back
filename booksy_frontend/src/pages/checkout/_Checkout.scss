@@ -94,3 +94,12 @@
     }
   }
 }
+
+@media screen and (max-height: 750px) {
+  .checkout-page {
+    height: auto;
+    .checkout-container {
+      margin: 50px auto;
+    }
+  }
+}

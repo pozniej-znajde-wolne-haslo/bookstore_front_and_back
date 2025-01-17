@@ -16,3 +16,13 @@
     @include desktopSignInAndUpForms(500px, 80%);
   }
 }
+
+@media screen and (max-height: 750px) {
+  .register-page {
+    height: auto;
+
+    .form-container {
+      margin: 50px auto;
+    }
+  }
+}

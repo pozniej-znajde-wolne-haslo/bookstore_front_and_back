@@ -92,3 +92,19 @@
     }
   }
 }
+
+@media screen and (max-height: 750px) {
+  .homepage {
+    height: auto;
+
+    .searchbar-container {
+      height: 10rem;
+    }
+
+    .homepage-content {
+      .hero {
+        margin: 5rem auto;
+      }
+    }
+  }
+}
