@@ -12,7 +12,6 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 8vh;
-    min-height: 6rem;
     padding-right: 3rem;
 
     .shop-logo-container {
@@ -100,7 +99,6 @@ footer {
   border-top: $primary-border;
   color: $primary-font-color;
   height: 8vh;
-  min-height: 6rem;
 
   .footer-text {
     @extend .shop-name-styles;

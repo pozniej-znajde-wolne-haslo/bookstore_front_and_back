@@ -8,10 +8,13 @@ import DeleteBook from './deleteBook/DeleteBook';
 import UpdateBtnAdmin from './UpdateBtnAdmin';
 import UpdateBook from './updateBook/UpdateBook';
 import Pagination from './pagination/Pagination';
+import LoadingSpinner from './loadingSpinner/LoadingSpinner';
 
 export default function Genre() {
   const { state } = useLocation();
   const {
+    loading,
+    setLoading,
     booksToGenre,
     setBooksToGenre,
     user,
@@ -34,6 +37,7 @@ export default function Genre() {
         if (res.success) {
           setCurrentPage(1);
           setBooksToGenre(res.data);
+          setLoading(false);
         }
       })
       .catch((err) => console.log(err));
@@ -55,30 +59,34 @@ export default function Genre() {
   );
   const currentBooks = sortedBooks.slice(indexOfFirstBook, indexOfLastBook);
 
-  return (
-    <>
-      <div className='books-container'>
-        {currentBooks.map((book) => {
-          return (
-            <div key={book._id}>
-              <div className='bookCard-and-btns-container'>
-                <BookCard book={book} />
-                <div className='cart-and-admin-btns-container'>
-                  <CartBtn book={book} />
-                  {user?.role === 'admin' && <UpdateBtnAdmin book={book} />}
-                  {user?.role === 'admin' && <DeleteBtnAdmin book={book} />}
+  if (loading) {
+    return <LoadingSpinner />;
+  } else {
+    return (
+      <>
+        <div className='books-container'>
+          {currentBooks.map((book) => {
+            return (
+              <div key={book._id}>
+                <div className='bookCard-and-btns-container'>
+                  <BookCard book={book} />
+                  <div className='cart-and-admin-btns-container'>
+                    <CartBtn book={book} />
+                    {user?.role === 'admin' && <UpdateBtnAdmin book={book} />}
+                    {user?.role === 'admin' && <DeleteBtnAdmin book={book} />}
+                  </div>
                 </div>
+                {bookToUpdate?._id === book._id && <UpdateBook book={book} />}
+                {bookToDelete?._id === book._id && <DeleteBook book={book} />}
               </div>
-              {bookToUpdate?._id === book._id && <UpdateBook book={book} />}
-              {bookToDelete?._id === book._id && <DeleteBook book={book} />}
-            </div>
-          );
-        })}
-      </div>
-      <Pagination
-        booksPerPage={booksPerPage}
-        totalBooks={booksToGenre.length}
-      />
-    </>
-  );
+            );
+          })}
+        </div>
+        <Pagination
+          booksPerPage={booksPerPage}
+          totalBooks={booksToGenre.length}
+        />
+      </>
+    );
+  }
 }

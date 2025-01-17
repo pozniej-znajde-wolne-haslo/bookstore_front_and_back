@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 const key = 'basket';
 
 export default function Container({ children }) {
+  const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
   const [books, setBooks] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -37,6 +38,8 @@ export default function Container({ children }) {
     <>
       <Context.Provider
         value={{
+          loading,
+          setLoading,
           user,
           setUser,
           books,

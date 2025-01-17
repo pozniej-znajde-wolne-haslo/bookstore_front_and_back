@@ -52,6 +52,7 @@ body {
 .books-container {
   @include flexbox(row, 2.5rem);
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   margin: 3.5rem 2.7rem 3rem 2.7rem;
   .bookCard-and-btns-container {
