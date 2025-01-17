@@ -2,6 +2,7 @@
 
 .search-genres-container {
   @include flexbox(column, 3rem);
+  justify-content: center;
   align-items: center;
   border-bottom: $primary-border;
   height: 20vh;

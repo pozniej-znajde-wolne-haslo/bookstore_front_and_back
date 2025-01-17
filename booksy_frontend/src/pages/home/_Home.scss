@@ -7,12 +7,15 @@
   grid-template-areas:
     'searchBar'
     'homepageContent';
-  grid-template-rows: 10% 1fr;
-  grid-template-rows: 1fr auto;
+
+  .searchbar-container {
+    display: flex;
+    align-items: center;
+  }
 
   .homepage-content {
     grid-area: homepageContent;
-    min-height: 74vh;
+    min-height: 70vh;
   }
 
   .image-container {
@@ -76,7 +79,6 @@
 @media screen and (min-width: 768px) {
   .homepage {
     .homepage-content {
-      min-height: 76vh;
       .image-container {
         .hero {
           width: 400px;

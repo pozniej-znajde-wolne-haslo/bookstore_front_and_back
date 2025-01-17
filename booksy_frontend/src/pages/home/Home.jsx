@@ -7,7 +7,9 @@ export default function Home() {
 
   return (
     <div className='homepage'>
-      <SearchBar />
+      <div className='searchbar-container'>
+        <SearchBar />
+      </div>
 
       <div className='homepage-content'>
         <div className='image-container'>
