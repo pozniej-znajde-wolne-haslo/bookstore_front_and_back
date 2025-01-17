@@ -136,3 +136,14 @@ footer {
     }
   }
 }
+
+@media screen and (max-height: 750px) {
+  header {
+    nav {
+      height: 6rem;
+    }
+  }
+  footer {
+    height: 6rem;
+  }
+}

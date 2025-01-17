@@ -1,7 +1,7 @@
 @import '../../_config';
 
 .search-genres-container {
-  @include flexbox(column, 3rem);
+  @include flexbox(column, 2rem);
   justify-content: center;
   align-items: center;
   border-bottom: $primary-border;
@@ -27,7 +27,7 @@
 
 @media only screen and (min-width: 550px) {
   .search-genres-container {
-    @include flexbox(column, 2rem);
+    @include flexbox(column, 1rem);
     height: 15vh;
 
     .books-genres-container {
@@ -41,5 +41,12 @@
         font-size: 1.7rem;
       }
     }
+  }
+}
+
+@media only screen and (max-height: 750px) {
+  .search-genres-container {
+    @include flexbox(column, 0.5rem);
+    height: 12rem;
   }
 }
