@@ -59,7 +59,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 3.5rem 2.7rem 3rem 2.7rem;
+  padding: 3.5rem 2.7rem 3rem 2.7rem;
   .bookCard-and-btns-container {
     @include flexbox(column, 0);
     align-items: center;
