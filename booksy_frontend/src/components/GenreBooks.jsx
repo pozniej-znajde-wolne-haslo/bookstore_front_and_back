@@ -63,7 +63,7 @@ export default function Genre() {
     return <LoadingSpinner />;
   } else {
     return (
-      <>
+      <div className='books-results-wrapper'>
         <div className='books-container'>
           {currentBooks.map((book) => {
             return (
@@ -86,7 +86,7 @@ export default function Genre() {
           booksPerPage={booksPerPage}
           totalBooks={booksToGenre.length}
         />
-      </>
+      </div>
     );
   }
 }

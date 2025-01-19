@@ -3,8 +3,6 @@
 .pagination-container {
   @include flexbox(row, 0.8rem);
   justify-content: center;
-  margin-top: 4rem;
-  padding-bottom: 4rem;
 
   li {
     color: #263238;

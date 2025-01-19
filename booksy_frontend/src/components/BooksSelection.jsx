@@ -50,10 +50,10 @@ export default function Selection() {
     return <LoadingSpinner />;
   } else {
     return (
-      <>
+      <div className='books-results-wrapper'>
         <BooksDisplay books={currentBooks} />
         <Pagination booksPerPage={booksPerPage} totalBooks={books.length} />
-      </>
+      </div>
     );
   }
 }

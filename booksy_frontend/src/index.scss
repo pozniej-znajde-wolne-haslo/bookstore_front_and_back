@@ -49,6 +49,11 @@ body {
 }
 
 /* *** shared styles on the books-pages *** */
+.books-results-wrapper {
+  min-height: 64vh;
+  padding-bottom: 3rem;
+}
+
 .books-container {
   @include flexbox(row, 2.5rem);
   justify-content: center;
@@ -80,5 +85,10 @@ body {
     .admin-btn {
       @extend .btn-magenta;
     }
+  }
+}
+@media screen and (min-width: 550px) {
+  .books-results-wrapper {
+    min-height: 69vh;
   }
 }

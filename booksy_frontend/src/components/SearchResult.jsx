@@ -69,7 +69,7 @@ export default function SearchResult() {
     return <LoadingSpinner />;
   } else {
     return (
-      <>
+      <div className='books-results-wrapper'>
         <div className='books-container'>
           {currentBooks.map((book) => (
             <div key={book._id}>
@@ -90,7 +90,7 @@ export default function SearchResult() {
           booksPerPage={booksPerPage}
           totalBooks={booksToGenre.length}
         />
-      </>
+      </div>
     );
   }
 }
